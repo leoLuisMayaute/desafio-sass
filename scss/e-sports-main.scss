@@ -24,24 +24,32 @@
             width: 100%;
         }
 
+        @mixin parametros-boton {
+            margin: 2em 0;
+            padding: 0.8em;
+            border-radius: 0.8rem;
+        }
+
         .contenedor-boton {
             text-align: center;
             .boton-equipos {
-                margin: 2em 0;
-                padding: 0.8em;
-                border-radius: 0.8rem;
-                background-color: rgb(189, 253, 95);
+                @include parametros-boton();
                 &:hover {
                     transform: scale(1.05);
                 }
                 a {
-                    font-size: 2rem;
+                    font-size: 1.5rem;
                     text-align: center;
                     text-decoration: none;
                     color: $color-principal-2;
+                    font-weight: 700;
                 }
             }
 
         }
     }
+}
+
+.contenedor-the-international {
+    text-align: center;
 }
